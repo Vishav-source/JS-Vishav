@@ -1,0 +1,1 @@
+// Everything same about for loop

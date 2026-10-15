@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Har Har Mahadev</title>
+</head>
+<body style="background-color: black; color:white">
+    <ul class="vishav">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    // Add
+    function addlanguage(langname){
+        const list=document.createElement('li')
+        list.innerHTML=`${langname}`
+        document.querySelector('.vishav').appendChild(list)
+
+    }
+    addlanguage("python")
+
+    // second way
+    function anotherway(langname){
+        const list=document.createElement('li')
+        list.appendChild(document.createTextNode(langname))
+        document.querySelector('.vishav').appendChild(list)
+
+    }
+    anotherway("mojo")
+    anotherway("rojo")
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="VISHAV"
+    const newli=document.createElement('li')
+    newli.textContent="Palak"
+    secondLang.replaceWith(newli)
+
+    // Remove
+
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
+
+
+
+
+</script>
+</html>
